@@ -57,6 +57,8 @@ const MessageSender = (props: any) => {
 
                     onChange={onChange}
                     onKeyDown={onKeyDown}
+
+                    wrap='soft'
                 />
                 <button
                     id={'hw1-button'}
