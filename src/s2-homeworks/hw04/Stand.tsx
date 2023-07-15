@@ -10,6 +10,7 @@ const Stand = () => {
 
     const [stateForAllCheckboxes, setChecked] = useState<boolean>(false)
 
+    console.log(stateForAllInputs)
     return (
         <div id={'hw4-stand'} className={s.stand}>
             <div className={s.inputs}>
@@ -28,6 +29,7 @@ const Stand = () => {
                         value={stateForAllInputs}
                         onChangeText={setValue}
                         error={error}
+                        onClearError={setError}
                         onEnter={() => {
                             setError(
                                 stateForAllInputs.trim()
@@ -43,7 +45,7 @@ const Stand = () => {
             <div className={s.buttons}>
                 {/*обычная кнопка:*/}
                 <div>
-                    <SuperButton id={'hw4-super-button-default'}>
+                    <SuperButton className={'default'} id={'hw4-super-button-default'}>
                         default
                     </SuperButton>
                 </div>
